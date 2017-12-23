@@ -41,7 +41,7 @@ class ConveniosController < ApplicationController
   # PATCH/PUT /convenios/1.json
   def update
     respond_to do |format|
-      if @convenio.update(convenio_params)
+      if @convenio.update_attributes(convenio_params)
         format.html { redirect_to @convenio, notice: 'Convenio was successfully updated.' }
         format.json { render :show, status: :ok, location: @convenio }
       else
