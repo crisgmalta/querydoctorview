@@ -6,10 +6,10 @@ Neste projeto ha telas para os recursos de
 * Especialidades medicas
 * Medicos
 * Pacientes
-
+o
 ## Dependencias
 * ruby 2.4.0
-* Query Doctor API (veja mais detalhes no README deste projeto)
+* [Query Doctor API](https://github.com/crisgmalta/querydoctor) (veja mais detalhes no README do projeto Query Doctor API)
 
 ## Setup do projeto
 Para configuar este projeto clone este repositorio e execute
