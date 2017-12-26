@@ -1,24 +1,18 @@
-# README
+# Query Doctor View
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Front end que utiliza API Query Doctor
+Neste projeto ha telas para os recursos de
+* Convenios
+* Especialidades medicas
+* Medicos
+* Pacientes
 
-Things you may want to cover:
+## Dependencias
+* ruby 2.4.0
+* Query Doctor API (veja mais detalhes no README deste projeto)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup do projeto
+Para configuar este projeto clone este repositorio e execute
+* bundle install
+* configure e inicie o Query Doctor API na porta 3000
+* rails s (o sistema estará disponível na porta 3001)
