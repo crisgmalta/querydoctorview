@@ -22,11 +22,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.text_field :date, id: :paciente_date %>
-  </div>
-
-  <div class="field">
     <%= form.label :rg %>
     <%= form.text_field :rg, id: :paciente_rg %>
   </div>
@@ -38,7 +33,10 @@
 
   <div class="field">
     <%= form.label :convenio_id %>
-    <%= form.text_field :convenio_id, id: :paciente_convenio_id %>
+    <%= form.collection_select(:convenio_id, Convenio.all, :id, :nome) %>
+ 
+
+ 
   </div>
 
   <div class="actions">

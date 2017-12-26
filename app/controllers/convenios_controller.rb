@@ -53,13 +53,21 @@ class ConveniosController < ApplicationController
 
   # DELETE /convenios/1
   # DELETE /convenios/1.json
-  def destroy
-    @convenio.destroy
+  
+
+   def destroy
     respond_to do |format|
-      format.html { redirect_to convenios_url, notice: 'Convenio was successfully destroyed.' }
-      format.json { head :no_content }
+      if @convenio.destroy
+        format.html { redirect_to convenio_url, notice: 'Convenio was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        format.html { render :edit }
+        format.json { render json: @onvenio.errors, status: :unprocessable_entity }
+      end
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,3 +1,3 @@
-class Convenio < ActiveResource::Base
+class Convenio < BaseResource
   self.site = "http://localhost:3000/api/v1"
 end

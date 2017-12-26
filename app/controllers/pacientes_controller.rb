@@ -25,7 +25,6 @@ class PacientesController < ApplicationController
   # POST /pacientes.json
   def create
     @paciente = Paciente.new(paciente_params)
-
     respond_to do |format|
       if @paciente.save
         format.html { redirect_to @paciente, notice: 'Paciente was successfully created.' }
@@ -41,7 +40,7 @@ class PacientesController < ApplicationController
   # PATCH/PUT /pacientes/1.json
   def update
     respond_to do |format|
-      if @paciente.update(paciente_params)
+      if @paciente.update_attributes(paciente_params)
         format.html { redirect_to @paciente, notice: 'Paciente was successfully updated.' }
         format.json { render :show, status: :ok, location: @paciente }
       else

@@ -54,10 +54,15 @@ class EspecialidadesController < ApplicationController
   # DELETE /especialidades/1
   # DELETE /especialidades/1.json
   def destroy
-    @especialidade.destroy
-    respond_to do |format|
-      format.html { redirect_to especialidades_url, notice: 'Especialidade was successfully destroyed.' }
-      format.json { head :no_content }
+  	respond_to do |format|
+      if @especialidade.destroy
+        format.html { redirect_to especialidades_url, notice: 'Especialidade was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        #render :index, @especialidade.errors, status: :unprocessable_entity
+        format.html { render :edit }
+        format.json { render json: @especialidade.errors, status: :unprocessable_entity }
+      end
     end
   end
 

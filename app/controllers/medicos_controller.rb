@@ -25,8 +25,6 @@ class MedicosController < ApplicationController
   # POST /medicos.json
   def create
     @medico = Medico.new(medico_params)
-    debugger
-    
     respond_to do |format|
       if @medico.save
         format.html { redirect_to @medico, notice: 'Medico was successfully created.' }

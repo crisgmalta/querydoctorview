@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Pacientes</h1>
+<hr>
 
 <table>
   <thead>
@@ -22,7 +23,8 @@
         <td><%= paciente.data_nascimento %></td>
         <td><%= paciente.rg %></td>
         <td><%= paciente.telefone %></td>
-        <td><%= paciente.convenio_id %></td>
+        <td><%= paciente.convenio.nome %></td>
+        
         <td><%= link_to 'Show', paciente %></td>
         <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
         <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
